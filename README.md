@@ -14,7 +14,10 @@ Luego, etiqueta la imagen Docker con un nombre más descriptivo:
 ```bash
 docker tag ami-ucsp-ide-backend-k8s-parcial moisessalazar/ami-ucsp-ide-backend-k8s-parcial
 ```
-Inicia sesión en Docker (si aún no lo has hecho) y sube la imagen Docker al registro de Docker:
+Inicia sesión
+
+
+ en Docker (si aún no lo has hecho) y sube la imagen Docker al registro de Docker:
 
 ```bash
 docker login
@@ -86,3 +89,4 @@ kubectl proxy
 
 http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
 
+https://github.com/MoisesSalazar/K8S-IDE/assets/42578698/12f5c6ec-448f-4cd4-bd03-78aa5d5e6948
