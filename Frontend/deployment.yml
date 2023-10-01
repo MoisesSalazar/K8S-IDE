@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+spec:
+  replicas: 3  # Cambia el número de réplicas según tus necesidades
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: moisessalazar/ami-ucsp-ide-frontend-k8s-parcial  # Reemplaza con la imagen correcta
+          ports:
+            - containerPort: 8080
