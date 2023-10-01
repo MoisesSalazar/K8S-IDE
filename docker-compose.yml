@@ -1,0 +1,18 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./backend  # Ruta a la carpeta del backend
+    ports:
+      - "5000:5000"  # Mapea el puerto 5000 del contenedor al puerto 5000 de la máquina local
+    networks:
+      - app_network  # Nombre de la red personalizada para la comunicación entre contenedores
+  frontend:
+    build:
+      context: ./frontend  # Ruta a la carpeta del frontend
+    ports:
+      - "8080:8080"  # Mapea el puerto 8080 del contenedor al puerto 8080 de la máquina local
+    networks:
+      - app_network  # Utiliza la misma red para la comunicación entre contenedores
+networks:
+  app_network:

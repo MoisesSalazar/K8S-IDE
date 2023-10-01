@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 3  # Cambia el número de réplicas según tus necesidades
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: moisessalazar/ami-ucsp-ide-backend-k8s-parcial  # Reemplaza con la imagen correcta
+          ports:
+            - containerPort: 5000
